@@ -28,3 +28,32 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 1) Create a function "makeNull"
 // 2) Declare a variable "nothingMuch" and assign null to it, then return "nothingMuch"
+
+function makeNothing (){
+var huh
+return huh
+
+}
+
+function makeBoolean () {
+var myBool = true
+return myBool
+}
+
+function makeTrue (){
+var yup = true
+return yup
+}
+
+function makeFalse (){
+var nope = false
+return nope
+
+}
+
+function makeNull (){
+var nothingMuch = null
+return nothingMuch
+
+
+}
