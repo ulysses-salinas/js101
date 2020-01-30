@@ -105,7 +105,7 @@ useJoin()
   console.assert(arr.join('') === 'abcdef') // pass an empty string to have no separator
 
   // create and return the string 'a-b-c-d-e-f' here
-
+ 
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
