@@ -10,18 +10,18 @@
 
 function threeNumbers () {
   const numbers = { numberOne: 1, numberTwo: 2, numberThree: 3 }
-
+return numbers
 }
-
+threeNumbers()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // An Object can contain any type for each property. ie: strings, numbers, boolean, etc
 // Return the object of values in the function below.
 
 function manyTypes () {
-  const diverseObject = { name: 'banana', count: 42, isDelicious: true }
-
+  const diverseObject = { name: 'banana', count: 42, delicious: true }
+return diverseObject
 }
-
+manyTypes()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // You can access individual values of an object using bracket notation shown below.
 // This allows you to write the label (key) assigned to the value and get the value back.
@@ -29,7 +29,9 @@ function manyTypes () {
 // Return the name of the bestFruit Object below.
 
 function keyAccess () {
-  const bestFruit = { name: 'banana', count: 42, isDelicious: true }
+  const bestFruit = { name: 'banana', count: 42, delicious: true }
+return bestFruit.name
+
 
   // console.assert() allows you to declare things that should be true; it's like
   // a sanity-check for your code.
@@ -41,14 +43,17 @@ function keyAccess () {
   // return the name of the bestFruit Object here.
 
 }
-
+keyAccess()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // You can add properties to an Object by assigning a value to a new key.
 // Add the property 'color' and assign it the string 'yellow' in the bestFruit object below.
 // Then return the object.
 
 function addKey () {
-  const bestFruit = { name: 'banana', count: 42 }
+  const bestFruit = { name: 'banana', count: 42, delicious: true }
+  
+bestFruit.color = 'yellow'
+return bestFruit
 
   // Note that before a key is assigned it will always return `undefined`
   console.assert(bestFruit['isDelicious'] === undefined)
@@ -58,7 +63,7 @@ function addKey () {
   // Assign 'yellow' to the key 'color' of bestFruit here and return bestFruit
 
 }
-
+addKey()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // When an Object gets large, it is normal to define its properties one-per-line as shown below.
 // Create your own object named bootcampStudent and give it 8 properties similar to
@@ -76,11 +81,21 @@ function largeObject () {
     pet: 'cat',
     ownsCar: true
   }
-
+  const bootcampStudent = {
+    name: 'Ulysses',
+    email: 'ulysses.salinas88@gmail.com',
+    age: 31,
+    heightFeet: 5.7,
+    favoriteColor: 'purple',
+    homeTown: 'Laredo',
+    pet: 'cat',
+    ownsCar: true
+  }
+return bootcampStudent
   // create a bootcampStudent object here similar to bootcampInstructor and return it
 
 }
-
+largeObject()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Objects aren't restricted to containing only JavaScript primitive types.
 // Remember, JavaScript primitive types include string, number, boolean, null...
@@ -97,14 +112,14 @@ function nestedArray () {
       'pho'
     ]
   }
-
+return bootcampInstructor.favoriteFoods[1]
   // Note that you can chain the bracket notation to reach into the Object AND into the Array.
   console.assert(bootcampInstructor['favoriteFoods'][0] === 'chicken pot pie')
 
   // Return the second item of the nested array favoriteFoods
 
 }
-
+nestedArray()
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // When working with Objects, it is most common to use the dot notation to access properties.
 // Bracket notation is more flexible, but dot notation is a more convenient, readable syntax.
@@ -123,7 +138,7 @@ function dotNotation () {
       'pho'
     ]
   }
-
+return bootcampInstructor.name
   // Some examples of using dot notation vs bracket notation:
   console.assert(bootcampInstructor.name === 'Susan')
   console.assert(bootcampInstructor['name'] === 'Susan')
@@ -140,3 +155,4 @@ function dotNotation () {
   // Return the name of the bootcampInstructor Object using dot notation
 
 }
+dotNotation()
